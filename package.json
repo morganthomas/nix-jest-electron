@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "electron": "git+https://github.com/morganthomas/nix-electron.git#ebb156f51b145824ef1cae731d807f11bd5ba976",
+    "electron": "git+https://github.com/morganthomas/nix-electron.git#e3d90923ddeabfb81b8ae0a7d58f7c69c1bff58b",
     "jest-haste-map": "~24.9.0",
     "jest-message-util": "~24.9.0",
     "jest-mock": "~24.9.0",
