@@ -55,6 +55,7 @@ export class Electron {
    * create an idle electron proc
    */
   private async create(): Promise<any> {
+    const electronPath = await electron.getElectronPath();
     return new Promise((resolve, reject) => {
       // electron starter
       const entry = path.join(__dirname, '../main/index');
@@ -63,7 +64,7 @@ export class Electron {
         args.splice(0, 0, '--no-sandbox');
       };
       const proc = spawn(
-        electron as any,
+        electronPath as any,
         args,
         {
           stdio: ['ipc'],
