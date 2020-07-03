@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as path from 'path';
 import { spawn } from 'child_process';
 import * as electron  from 'electron';
@@ -55,7 +56,7 @@ export class Electron {
    * create an idle electron proc
    */
   private async create(): Promise<any> {
-    const electronPath = await electron.getElectronPath();
+    const electronPath: String = await electron.getElectronPath();
     return new Promise((resolve, reject) => {
       // electron starter
       const entry = path.join(__dirname, '../main/index');
